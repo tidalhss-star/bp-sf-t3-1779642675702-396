@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 | 강남 셔츠룸 브로들의 주식투자 이야기</title>
+    <meta name="description" content="주식투자로 번 돈, 강남 셔츠룸에서 확실하게 불태워라. 마포 브로들이 인정한 최고의 장소. 거품 없는 가격, 압도적인 퀄리티. 지금 전화하라 010-6279-0862">
+    <meta name="keywords" content="강남 셔츠룸, 마포 주식투자, 주식투자, 셔츠룸, 강남, 마포, 브로, 투자, 수익, 실적, 리뷰, 블로그">
+    <link rel="canonical" href="https://sf-t3-1779642675702-396.vercel.app/blog">
+    <meta property="og:title" content="블로그 | 강남 셔츠룸 브로들의 주식투자 이야기">
+    <meta property="og:description" content="주식투자로 번 돈, 강남 셔츠룸에서 확실하게 불태워라. 마포 브로들이 인정한 최고의 장소.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-396.vercel.app/blog">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            padding: 0 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        .asymmetric-block {
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .asymmetric-block.reverse {
+            grid-template-columns: 5fr 7fr;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            color: #ff4444;
+            line-height: 0.9;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ff6666;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #b0b0b0;
+        }
+
+        a {
+            color: #ff4444;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        a:hover {
+            border-bottom-color: #ff4444;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff4444;
+            color: #0a0a0a;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            color: #0a0a0a;
+            transform: scale(1.05);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 40px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #2a2a2a;
+        }
+
+        nav .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ff4444;
+            text-transform: uppercase;
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav .nav-links a {
+            color: #e0e0e0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            border-bottom: none;
+        }
+
+        nav .nav-links a:hover {
+            color: #ff4444;
+        }
+
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger-menu span {
+            width: 30px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+        }
+
+        /* Tel link */
+        .tel-link {
+            display: inline-block;
+            background: #ff4444;
+            color: #0a0a0a;
+            padding: 12px 30px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .tel-link:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        /* Blog post card */
+        .blog-card {
+            background: #1a1a1a;
+            padding: 40px;
+            border-left: 4px solid #ff4444;
+            margin-bottom: 40px;
+        }
+
+        .blog-card .meta {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .blog-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .blog-card p {
+            font-size: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .grid {
+                padding: 0 20px;
+                gap: 15px;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+                letter-spacing: -1px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .asymmetric-block,
+            .asymmetric-block.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            nav {
+                padding: 15px 20px;
+            }
+
+            nav .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #0a0a0a;
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 2px solid #2a2a2a;
+            }
+
+            nav .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger-menu {
+                display: flex;
+            }
+
+            .blog-card {
+                padding: 25px;
+            }
+
+            .blog-card h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Texture overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255, 255, 255, 0.01) 2px,
+                rgba(255, 255, 255, 0.01) 4px
+            );
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">BRO ZONE</div>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/about">소개</a></li>
+            <li><a href="/blog">블로그</a></li>
+            <li><a href="/contact">문의</a></li>
+        </ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="hero grid">
+        <div class="asymmetric-block" style="grid-column: 1 / -1;">
+            <div>
+                <h1>BRO BLOG</h1>
+                <p style="font-size: 1.4rem; color: #ff4444; font-weight: 700;">주식투자로 번 현찰, 진짜 쓰는 법</p>
+                <p>마포 브로들이 직접 겪고 증명한 이야기. 거품 뺀 리얼한 썰과 팁만 남긴다. 강남 셔츠룸에서 불태운 수익의 기록.</p>
+                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+            </div>
+            <div style="background: #1a1a1a; padding: 60px 40px; border: 2px solid #2a2a2a;">
+                <p style="font-size: 1.2rem; font-style: italic; color: #ffffff;">"주식으로 3억 번 날, 강남 셔츠룸에서 다 털었다. 근데 후회는 없다. 그게 브로들의 방식이니까."</p>
+                <p style="color: #666; margin-top: 20px;">— 마포에서 온 익명의 브로</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid">
+        <div style="grid-column: 1 / -1;">
+            <h2>최신 포스트</h2>
+            <p style="font-size: 1.1rem; color: #888; margin-bottom: 50px;">여기 모든 글은 진짜 경험에서 나왔다. 가짜 리뷰는 없다. 브로 투 브로.</p>
+        </div>
+
+        <div style="grid-column: 1 / -1;">
+            <div class="blog-card">
+                <div class="meta">2025.04.12 · 마포 본사 직작 · by 브로K</div>
+                <h2>강남 셔츠룸, 왜 주식 부자들이 몰리는가?</h2>
+                <p>주식투자로 돈을 번 브로들은 한 가지 공통점이 있다. 바로 '확실한 보상'을 원한다는 거다. 차트 분석하고, 익절 타이밍 재고, 손절하는 그 피 말리는 과정. 그 끝에 있는 게 강남 셔츠룸이다. 왜? 거긴 거품이 없거든. 퀄리티는 압도적인데 가격은 그냥 합리적이야. 마포에서 인정한 이유가 있다. 현금 들고 가서 맘껏 즐기고 나오면, 다음 투자가 더 명확해진다. 내 경험담이다.</p>
+                <p style="margin-top: 20px;"><a href="tel:010-6279-0862" class="btn">전화로 더 듣기</a></p>
+            </div>
+
+            <div class="blog-card">
+                <div class="meta">2025.04.05 · 현장취재 · by 브로J</div>
+                <h2>거품 빼고 본 강남 셔츠룸의 진실</h2>
+                <p>인터넷에 떠도는 후기? 대부분 가짜야. 내가 직접 가봤다. 강남 셔츠룸, 이름값 하는 곳은 딱 정해져 있다. 마포 브로들 사이에서는 이미 정리가 끝난 이야기. 주식 수익 인증하고 들어가면 대우가 달라진다. 왜 그런지 아냐? 그들은 진짜 돈 쓰는 손님을 알아보거든. 나도 처음엔 의심했지만, 막상 가보니 말이 안 나오더라. 이건 글로 설명하는 게 아니다. 직접 전화해서 확인해라. 후회 안 시킨다.</p>
+                <p style="margin-top: 20px;"><a href="tel:010-6279-0862" class="btn">010-6279-0862</a></p>
+            </div>
+
+            <div class="blog-card">
+                <div class="meta">2025.03.28 · 투자썰 · by 브로H</div>
+                <h2>주식 수익 5000만 원, 나는 이렇게 탕진했다</h2>
+                <p>사실 탕진이라는 표현은 좀 그렇다. '투자'였다. 내 몸과 마음에. 강남 셔츠룸에서 보낸 그 밤, 내가 번 돈이 그냥 사라진 게 아니라 다른 형태로 돌아왔다. 스트레스는 풀리고, 다음 투자에 대한 집중력은 올라갔다. 브로들이 왜 거길 가는지 알겠더라. 단순한 소비가 아니다. 리셋 버튼을 누르는 거다. 그리고 다음날 다시 차트 앞에 앉을 힘을 얻는 거고. 이게 내가 말하는 '확실하게 불태우는' 것의 의미다.</p>
+                <p style="margin-top: 20px;"><a href="tel:010-6279-0862" class="btn">지금 전화해서 예약</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid" style="border-bottom: none;">
+        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
+            <h2 style="font-size: 2rem;">더 많은 이야기가 필요하다면?</h2>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px;">블로그엔 다 못 적었다. 진짜 썰은 전화로만 푼다. 브로들의 영업 비밀, 지금 바로 확인해라.</p>
+            <a href="tel:010-6279-0862" class="tel-link" style="font-size: 2rem;">010-6279-0862</a>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
